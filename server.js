@@ -33,19 +33,19 @@ var server = http.createServer(function(request, response){
 
   console.log('方方说：得到 HTTP 路径\n' + path)
   if (path == '/') {
-    response.setHeader('Content-Type', 'text/html; charset="UTF-8"')
+    response.setHeader('Content-Type', 'text/html; charset="utf-8"')
     response.write('<!DOCTYPE>\n<html><head><link rel="stylesheet" href="/style.css"></head>' + 
 	           '<body><h1>Hello, Jonathan!</h1>' + 
 	           '<script src="/main.js"></script></body></html>')
     response.end()	  
   }
   else if (path == '/style.css') {
-    response.setHeader('Content-Type', 'text/css; charset="UTF-8"')
+    response.setHeader('Content-Type', 'text/css; charset="utf-8"')
     response.write('body{background-color: #ccc;}h1{color: red;}')
     response.end()
   }
   else if (path == '/main.js') {
-    response.setHeader('Content-Type', 'text/javascript; charset="UTF-8"')
+    response.setHeader('Content-Type', 'text/javascript; charset="utf-8"')
     response.write('alert(\'666，你成功了\')')
     response.end()
   }
